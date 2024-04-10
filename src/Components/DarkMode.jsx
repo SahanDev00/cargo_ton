@@ -28,8 +28,8 @@ const DarkMode = () => {
     return (
         <>
             <div className='relative top-6'>
-                <img src={dark} alt="" onClick={changeTheme} className={`w-12 absolute cursor-pointer right-0 z-10 drop-shadow-[1px_1px_1px_rgba(0,0,0,0.1)] transition-all duration-300 ${theme !== 'dark'? 'opacity-0' : 'opacity-100'}`} />
-                <img src={light} alt="" onClick={changeTheme} className='w-12 right-0 z-10 drop-shadow-[1px_1px_1px_rgba(0,0,0,0.1)] transition-all duration-300' />
+                <img src={dark} alt="" onClick={changeTheme} className={`w-10 md:w-12 absolute cursor-pointer z-10 drop-shadow-[1px_1px_1px_rgba(0,0,0,0.1)] transition-all duration-300 ${theme !== 'dark'? 'opacity-0' : 'opacity-100'}`} />
+                <img src={light} alt="" onClick={changeTheme} className='w-10 md:w-12  z-10 drop-shadow-[1px_1px_1px_rgba(0,0,0,0.1)] transition-all duration-300' />
             </div>
         </>
     )
