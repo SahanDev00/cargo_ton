@@ -3,6 +3,7 @@ import { NavLink, useLocation } from 'react-router-dom'
 import logo from '../Assests/logo.png'
 import DarkMode from './DarkMode'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { MdOutlineArrowDropDown } from "react-icons/md";
 
 const Navbar = () => {
     const location = useLocation();
@@ -35,18 +36,17 @@ const Navbar = () => {
     return (
         <div className='w-full h-[70px]'>
             <div className='w-full h-full flex justify-between'>
-                <img className='lg:w-[100px] w-[90px] lg:h-[50px] h-[40px] ml-10 mt-2 cursor-pointer' src={logo} alt="Cargo" />
+                <img className='lg:w-[100px] w-[90px] lg:h-[50px] h-[40px] ml-10 mt-2 cursor-pointer rounded-lg' src={logo} alt="Cargo" />
                 <div className='absolute left-[150px]'>
                     <DarkMode/>
                 </div>
 
-                
-                <ul className='lg:flex items-center lg:gap-5 xl:gap-10 ml-[20%] xl:ml-[30%] font-semibold text-black/80 hidden '>
-                    <NavLink to='/' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/') ? "border-l-4 border-yellow-500" : ""}`}>HOME</NavLink>
-                    <NavLink to='/pages' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/pages') ? "border-l-4 border-yellow-500" : ""}`}>PAGES</NavLink>
+                <ul className='lg:flex items-center lg:gap-4 xl:gap-8 ml-[20%] xl:ml-[30%] font-semibold text-black/80 hidden'>
+                    <NavLink to='/' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/') ? "border-l-4 border-yellow-500" : ""}`}>HOME<MdOutlineArrowDropDown className='inline'/></NavLink>
+                    <NavLink to='/pages' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/pages') ? "border-l-4 border-yellow-500" : ""}`}>PAGES<MdOutlineArrowDropDown className='inline'/></NavLink>
                     <NavLink to='/tracking' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/tracking') ? "border-l-4 border-yellow-500" : ""}`}>TRACKING</NavLink>
-                    <NavLink to='/services' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/services') ? "border-l-4 border-yellow-500" : ""}`}>SERVICES</NavLink>
-                    <NavLink to='/blog' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/blog') ? "border-l-4 border-yellow-500" : ""}`}>BLOG</NavLink>
+                    <NavLink to='/services' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/services') ? "border-l-4 border-yellow-500" : ""}`}>SERVICES<MdOutlineArrowDropDown className='inline'/></NavLink>
+                    <NavLink to='/blog' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/blog') ? "border-l-4 border-yellow-500" : ""}`}>BLOG<MdOutlineArrowDropDown className='inline'/></NavLink>
                 </ul>
                 <div className='lg:flex justify-center gap-3 mr-10 my-auto hidden'>
                     <button className='w-[100px] h-[40px] text-xs text-white font-semibold bg-[#FFC700] hover:scale-105 duration-300 hover:drop-shadow-lg rounded-lg'>
@@ -61,7 +61,7 @@ const Navbar = () => {
                     {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20}/>}
                 </div>
 
-                <div ref={navRef} className={nav ? ' lg:hidden fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-gray-300 dark:bg-gray-700 ease-in-out duration-500  z-10' : 'fixed left-[-100%]'}>
+                <div ref={navRef} className={nav ? ' lg:hidden fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-gray-300 dark:bg-gray-700 ease-in-out duration-500  z-20' : 'fixed left-[-100%]'}>
                     <img src={logo} alt="grave" className='p-1 mt-5 ml-5 md:ml-10 cursor-pointer w-[120px] '/>
                     <ul className='lg:hidden flex flex-col gap-10 ml-[40px] md:ml-[100px] mt-[50px] font-semibold text-black/80 text-2xl'>
                         <NavLink to='/' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/') ? "border-l-4 border-yellow-500" : ""}`}>HOME</NavLink>

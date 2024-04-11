@@ -1,5 +1,6 @@
 import React from 'react'
 import {BrowserRouter as Router, Route , Routes} from 'react-router-dom'
+import Footer from './Components/Footer';
 import Blog from './Pages/Blog';
 import Home from './Pages/Home';
 import Pages from './Pages/Pages';
@@ -20,7 +21,7 @@ function App() {
           <Route path='/services' element={<Services/>}/>
           <Route path='/blog' element={<Blog/>}/>
         </Routes>
-
+        <Footer/>
       </Router>
     </div>
   );
