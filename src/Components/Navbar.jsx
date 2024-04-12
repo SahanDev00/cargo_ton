@@ -33,6 +33,26 @@ const Navbar = () => {
         setNav(!nav);
     };
 
+    const [dropdown1pen, setDropdown1pen] = useState(false);
+    const [dropdown2pen, setDropdown2pen] = useState(false);
+    const [dropdown3pen, setDropdown3pen] = useState(false);
+    const [dropdown4pen, setDropdown4pen] = useState(false);
+
+    const toggleDropdown1 = () => {
+        setDropdown1pen(!dropdown1pen);
+    };
+
+    const toggleDropdown2 = () => {
+        setDropdown2pen(!dropdown2pen);
+    };
+    const toggleDropdown3 = () => {
+        setDropdown3pen(!dropdown3pen);
+    };
+
+    const toggleDropdown4 = () => {
+        setDropdown4pen(!dropdown4pen);
+    };
+
     return (
         <div className='w-full h-[70px]'>
             <div className='w-full h-full flex justify-between'>
@@ -42,11 +62,42 @@ const Navbar = () => {
                 </div>
 
                 <ul className='lg:flex items-center lg:gap-4 xl:gap-8 ml-[20%] xl:ml-[30%] font-semibold text-black/80 hidden'>
-                    <NavLink to='/' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/') ? "border-l-4 border-yellow-500" : ""}`}>HOME<MdOutlineArrowDropDown className='inline'/></NavLink>
-                    <NavLink to='/pages' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/pages') ? "border-l-4 border-yellow-500" : ""}`}>PAGES<MdOutlineArrowDropDown className='inline'/></NavLink>
+                    <NavLink to='/' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/') ? "border-l-4 border-yellow-500" : ""}`}>HOME<MdOutlineArrowDropDown onClick={toggleDropdown1} className='inline'/>
+                    {dropdown1pen && (
+                            <ul className="absolute mt-2 py-2 w-20 pl-2 bg-white border border-gray-200 rounded-md shadow-lg dark:bg-gray-800">
+                                <li><NavLink to="/">Item 1</NavLink></li>
+                                <li><NavLink to="/">Item 2</NavLink></li>
+                                <li><NavLink to="/">Item 3</NavLink></li>
+                            </ul>
+                        )}
+                    </NavLink>
+                    <NavLink to='/pages' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/pages') ? "border-l-4 border-yellow-500" : ""}`}>PAGES<MdOutlineArrowDropDown onClick={toggleDropdown2} className='inline'/>
+                    {dropdown2pen && (
+                            <ul className="absolute mt-2 py-2 w-20 pl-2 bg-white border border-gray-200 rounded-md shadow-lg dark:bg-gray-800">
+                                <li><NavLink to="/">Item 1</NavLink></li>
+                                <li><NavLink to="/">Item 2</NavLink></li>
+                                <li><NavLink to="/">Item 3</NavLink></li>
+                            </ul>
+                        )}
+                    </NavLink>
                     <NavLink to='/tracking' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/tracking') ? "border-l-4 border-yellow-500" : ""}`}>TRACKING</NavLink>
-                    <NavLink to='/services' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/services') ? "border-l-4 border-yellow-500" : ""}`}>SERVICES<MdOutlineArrowDropDown className='inline'/></NavLink>
-                    <NavLink to='/blog' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/blog') ? "border-l-4 border-yellow-500" : ""}`}>BLOG<MdOutlineArrowDropDown className='inline'/></NavLink>
+                    <NavLink to='/services' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/services') ? "border-l-4 border-yellow-500" : ""}`}>SERVICES<MdOutlineArrowDropDown onClick={toggleDropdown3} className='inline'/>
+                    {dropdown3pen && (
+                            <ul className="absolute mt-2 py-2 w-20 pl-2 bg-white border border-gray-200 rounded-md shadow-lg dark:bg-gray-800">
+                                <li><NavLink to="/">Item 1</NavLink></li>
+                                <li><NavLink to="/">Item 2</NavLink></li>
+                                <li><NavLink to="/">Item 3</NavLink></li>
+                            </ul>
+                        )}
+                    </NavLink>
+                    <NavLink to='/blog' className={`hover:text-yellow-600 cursor-pointer pl-2 dark:text-white ${isActive('/blog') ? "border-l-4 border-yellow-500" : ""}`}>BLOG<MdOutlineArrowDropDown onClick={toggleDropdown4} className='inline'/>
+                    {dropdown4pen && (
+                            <ul className="absolute mt-2 py-2 w-20 pl-2 bg-white border border-gray-200 rounded-md shadow-lg dark:bg-gray-800">
+                                <li><NavLink to="/">Item 1</NavLink></li>
+                                <li><NavLink to="/">Item 2</NavLink></li>
+                                <li><NavLink to="/">Item 3</NavLink></li>
+                            </ul>
+                        )}</NavLink>
                 </ul>
                 <div className='lg:flex justify-center gap-3 mr-10 my-auto hidden'>
                     <button className='w-[100px] h-[40px] text-xs text-white font-semibold bg-[#FFC700] hover:scale-105 duration-300 hover:drop-shadow-lg rounded-lg'>
