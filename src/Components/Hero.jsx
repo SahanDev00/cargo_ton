@@ -18,7 +18,7 @@ const Hero = () => {
                 <p className='mt-4 lg:mt-8 ml-[10px] lg:ml-[45px] text-black/90 dark:text-white font-poppins'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem perspiciatis veniam labore nostrum sed omnis nulla neque magni, in consectetur?</p>
                 <button className='w-[120px] h-[40px] ml-[10px] lg:ml-[45px] mt-6 text-xs text-white font-semibold bg-[#FFC117] hover:scale-105 duration-300 hover:drop-shadow-lg rounded-lg'>DISCOVER MORE</button>
             </div>
-            <div className='z-10 absolute lg:top-[550px] xl:top-[660px] top-[500px] md:bottom-0 left-0 w-[120px] h-[40px] p-3 mt-6 text-xs text-white font-semibold bg-[#FFC117]'>
+            <div className='z-10 absolute lg:top-[550px] xl:top-[660px] top-[500px] md:top-[650px] left-0 w-[120px] h-[40px] p-3 mt-6 text-xs text-white font-semibold bg-[#FFC117]'>
                 <div className='grid grid-cols-2'>
                     <div className='items-center my-auto'>
                          2 / 2 
