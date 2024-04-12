@@ -55,7 +55,7 @@ const News = () => {
             <h1 className='flex justify-center font-bold pt-2 text-2xl sm:text-3xl dark:text-white font-poppins'>Latest News.</h1>
             <div className='flex justify-center mb-6 items-center gap-3'>
                 <div className='w-[10px] h-[10px] bg-[#2FC4F4]'/>
-                <p className='text-xs font-semibold'>INTEGER CONGUE ELIT</p>
+                <p className='text-xs font-semibold dark:text-white'>INTEGER CONGUE ELIT</p>
             </div>
             <div className='flex flex-col sm:grid grid-cols-1 sm:grid-cols-2 md:gap-5 sm:gap-4 md:mx-[50px] lg:gap-8 lg:mx-36 xl:mx-40 sm:mx-10  items-center dark:text-white '>
                 {items.map((items, index) => (
