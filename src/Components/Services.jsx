@@ -55,10 +55,7 @@ const Services = () => {
         speed: 500,
         slidesToShow: 2,
         slidesToScroll: 2,
-        autoplaySpeed: 2000,
         cssEase: 'Linear',
-        pauseOnHover: true,
-        pauseOnFocus: true, 
         responsive: [
             {
                 breakpoint: 1000,
