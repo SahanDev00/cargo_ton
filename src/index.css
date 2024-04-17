@@ -23,3 +23,7 @@
   font-family: "saira";
   src: url("/src/Fonts/SairaCondensed-Regular.ttf");
 }
+
+.slick-slide > div {
+  margin: 0 15px;
+}
